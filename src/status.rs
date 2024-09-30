@@ -40,6 +40,7 @@ pub enum Error {
     GD,
     LibC,
     Curl,
+    Utf8,
     Other,
 }
 
@@ -64,6 +65,6 @@ pub fn from_libsixel(status: sixel_sys::status::Status) -> Status<()> {
         SIXEL_GD_ERROR => Err(Error::GD),
         SIXEL_LIBC_ERROR => Err(Error::LibC),
         SIXEL_CURL_ERROR => Err(Error::Curl),
-        _ => panic!("Unkown sixel error"),
+        _ => panic!("Unkown sixel error: {status}"),
     }
 }

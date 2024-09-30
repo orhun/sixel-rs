@@ -94,19 +94,18 @@ impl<'a> ColorOption<'a> {
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum DiffusionMethod {
-    Auto,
-    None,
-    FS,
-    Atkinson,
-    Jajuni,
-    Stucki,
-    Burkes,
+    Auto = 0,
+    None = 1,
+    Atkinson = 2,
+    FS = 3,
+    Jajuni = 4,
+    Stucki = 5,
+    Burkes = 6,
 }
 
 impl DiffusionMethod {
     pub fn to_str(self) -> &'static str {
         use self::DiffusionMethod::*;
-
         match self {
             Auto => "auto",
             None => "none",
@@ -115,6 +114,20 @@ impl DiffusionMethod {
             Jajuni => "jajuni",
             Stucki => "stucki",
             Burkes => "burkes",
+        }
+    }
+
+    pub fn to_sixel_diffusion_method(self) -> sixel_sys::DiffusionMethod {
+        use self::DiffusionMethod::*;
+        use sixel_sys::DiffusionMethod as SixelDiffusionMethod;
+        match self {
+            Auto => SixelDiffusionMethod::Auto,
+            None => SixelDiffusionMethod::None,
+            FS => SixelDiffusionMethod::FS,
+            Atkinson => SixelDiffusionMethod::Atkinson,
+            Jajuni => SixelDiffusionMethod::JaJuNi,
+            Stucki => SixelDiffusionMethod::Stucki,
+            Burkes => SixelDiffusionMethod::Burkes,
         }
     }
 }

@@ -12,3 +12,6 @@ edition = "2021"
 
 [dependencies]
 sixel-sys = "0.3.1"
+
+[dev-dependencies]
+image = "0.25"
