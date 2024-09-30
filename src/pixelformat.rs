@@ -1,4 +1,4 @@
-use sixel_sys::PixelFormat;
+pub use sixel_sys::PixelFormat;
 use std::os::raw::c_int;
 
 pub trait PixelFormatChan {
