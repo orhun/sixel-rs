@@ -1,6 +1,6 @@
 [package]
 name = "sixel-rs"
-version = "0.4.1"
+version = "0.5.0"
 description = "A safe Rust wrapper for libsixel (active fork)"
 authors = ["rabite0", "AdnoC <adam.r.cutler@gmail.com>", "Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
 homepage = "https://github.com/orhun/sixel-rs"
