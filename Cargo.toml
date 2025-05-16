@@ -11,7 +11,7 @@ categories = ["api-bindings", "graphics", "multimedia::images"]
 edition = "2021"
 
 [dependencies]
-sixel-sys = "0.3.1"
+sixel-sys = "0.5.0"
 
 [dev-dependencies]
 image = "0.25"
